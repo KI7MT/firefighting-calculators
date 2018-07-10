@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--
+    Name .........: index.html
+    Project ......: Part of the firefighter-calculators project
+    Desctiption ..: Main Page (index.html)
+    Project URL ..: https://github.com/KI7MT/firefighting-calculators
+
+    Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
+    Copyright ....: Copyright (C) 2018 Greg Beam, KI7MT
+    License ......: GPL-3
+ -->
+<html lang="en">
+    <head>
+        <title>Firefighting Calculators</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/sticky-footer.css">
+        <link rel="stylesheet" href="./css/image.css">
+        <link rel="icon" href="./images/favicon.ico">
+     </head>
+
+  <!-- Start the main body -->
+  <body>
+    <!-- Start the top Nav-Bar Inverse (white on black) -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+
+              <!-- this adds the lines to the span pull-down -->
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="index.html">Firefighting Calculators</a>
+          </div>
+   
+          <!-- Add content to menu bar -->
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <!-- Add dropdown menu -->
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Calculators<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="firstResponder.html">Fire Fighter Costs</a></li>
+                  <li><a href="fireFlow.html">Fire Flow Rate</a></li>
+                  <li><a href="waterSupply.html">Water Supply</a></li>
+                </ul>
+              </li>
+             </ul>
+             <ul class="nav navbar-nav navbar-right">
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+     <!-- Main jumbotron for section below header -->
+    <div class="jumbotron">
+      <div class="container">
+        <h2 class="display-3">Fire Departments Calculators</h2>
+        <p>
+          Below are three calculators used to answer common questions in and
+          around fire fighting. Use the Info Button on each form for more details.
+        </p>
+      </div>
+    </div>
+    
+    <!-- first container -->
+    <div class="container">
+
+      <!-- div for Equiptment cost section -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Equiptment Cost</h2>
+          <p>
+            This calculator determines the cost of basic fire Fighter equiptment.
+            PPE and Radio Costs on Floating Numbers. Type and Pager are set based
+            on selection.
+           
+          </p>
+
+          <!-- Add Screen Shot Image of First Responder Form -->
+          <a target="_blank" href="images/cost-calculator.png">
+            <img src="images/cost-calculator.png" alt="Equiptment" style="width:200px">
+          </a>
+          
+          <p><br />
+            <a class="btn btn-secondary" href="firstResponder.html" role="button">Use Calculator &raquo;</a>
+          </p>
+        </div>
+        
+        <!-- div for time card section -->
+        <div class="col-md-4">
+            <h2>Fire Flow Rates</h2>
+            <p>
+
+                Fire flow determines the amout of water a given fire requires
+                to maintain control. Two formulas are used to calulate
+                these values, NFA Academy, and Iowa University.
+            </p>
+ 
+         <!-- Add Screen Shot Image of Fire FLow Form -->
+         <a target="_blank" href="images/fire-flow.png"><img src="images/fire-flow.png" alt="Fire Flow" style="width:200px"></a>
+           <p><br />
+              <a class="btn btn-secondary" href="fireFlow.html" role="button">Use Calculator &raquo;</a>
+          </p>
+          
+        </div>
+      
+       <!-- div for Watersuppy section -->
+       <div class="col-md-4">
+          <h2>Water Supply</h2>
+          <p>
+              This calculator determines how long a particular Engine and Tender
+              combination can pump water on a fire without being resupplied.
+          </p>
+
+          <!-- Add Screen Shot Image of Water Supply Form -->
+          <a target="_blank" href="images/water-supply.png">
+            <img src="images/water-supply.png" alt="Water Supply" style="width:200px">
+          </a>
+
+           <p><br />
+            <a class="btn btn-secondary" href="waterSupply.html" role="button">Use Calculator &raquo;</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+     <!-- Add the footer message -->
+    <footer class="footer">
+      <div class="container">
+          <span class="text-muted">Copyright &copy; 2018, Greg Beam, GPLv3</span>
+      </div>
+    </footer>
+
+    <!-- use bootstrap and jQuery js files -->
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
+  </body>
+</html>
