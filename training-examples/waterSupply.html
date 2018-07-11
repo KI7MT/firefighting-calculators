@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--
+    Name .........: waterSupply.html
+    Project ......: Part of the firefighter-calculators project
+    Desctiption ..: This file calculates Fire Flow Rates (required water)
+    Project URL ..: https://github.com/KI7MT/firefighting-calculators
+
+    Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
+    Copyright ....: Copyright (C) 2018 Greg Beam, KI7MT
+    License ......: GPL-3
+ -->
+<html lang="en">
+    <head>
+        <title>Firefighting Calculators</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/sticky-footer.css">
+        <link rel="icon" href="./images/favicon.ico">
+    </head>
+
+  <!-- Start the main body -->
+  <body>
+
+     <!-- Start the top Nav-Bar Inverse (white on black) -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <!-- this adds the lines to the span pull-down -->
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">Water Supply</a>
+          </div>
+   
+          <!-- Add content to menu bar We only have Home button on calculators -->
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+          </div>
+        </div>
+    </nav>
+
+    <!-- Add Container -->
+    <div class="container">
+    <article>
+
+        <!-- Start middle sections -->
+        <h3>Water Supply - Time Until Empty</h3>
+        <p>
+            The purpose of this calculator is simple, yet provides <br />
+            critical information to Incident Commanders. If the on-site fire<br />
+            crew does not know their water supply time-until-empty data,<br />
+            peoples lives are put at risk.
+        </p>
+         <p>Use the Info Button below for additional informaiton.</p>
+        
+        <!-- Start Input Form -->
+        <form id="waterSupplyForm">
+            <!-- Add separator -->
+            <hr>
+
+            <!-- Building Length in Feet -->
+            <div class="form-group row">
+                <label for="inputTenderCapacity" class="col-xs-2 form-control-label" autofocus>Tender Capacity</label>
+                <div class="col-xs-2">
+                    <input type="text" class="form-control" id="inputTenderCapacity" placeholder="3000">
+                    <span class="help-block" id="errorTenderCapacity">Integer must be > 0</span>
+                </div>
+            </div>
+
+            <!-- Building Width in Feet -->
+            <div class="form-group row">
+                <label for="inputEngineCapacity" class="col-xs-2 form-control-label">Engine Capacity</label>
+                <div class="col-xs-2">
+                    <input type="text" class="form-control" id="inputEngineCapacity" placeholder="750">
+                    <span class="help-block" id="errorEngineCapacity">Integer must be > 0</span>
+                </div>
+            </div>
+
+            <!-- Building Height in Feet -->
+            <div class="form-group row">
+                <label for="inputPumpRate" class="col-xs-2 form-control-label">Pump Rate</label>
+                <div class="col-xs-2">
+                    <input type="text" class="form-control" id="inputPumpRate" placeholder="200">
+                    <span class="help-block" id="errorPumpRate">Integer must be > 0</span>
+                </div>
+            </div>
+
+            <!-- Add separator -->
+            <hr>
+
+            <!-- Submit Button -->
+            <div class="form-group row">
+                <div class="col-sm-offset-0 col-sm-10">
+                    <button id="buttonWaterSupplyCalculate" type="button" class="btn btn-secondary" data-inline="true">Calculate</button>&nbsp;
+                    <button id="clearButton" type="button" class="btn btn-secondary" data-inline="true">Reset</button>&nbsp;
+                    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#infofr">More Info</button>
+                    <div id="infofr" class="collapse">
+                        <p><br />
+                        <p>
+                        <h3>Water Supply Computation</h3>
+                            The formula is straight forward: time = (gallons of water / pump-rate)
+                        </p>
+                        <p>     
+                            Example: A tender holds 3000(gal) ofwater, engine 750(gal)
+                            and the engine pump rate of 200 gpm at 200psi.
+
+                            200 psi is the industry standard pressure rating for
+                            ISO testing. Engines must maintain this pumprate for 
+                            at least 20 minutes.
+
+                            In the Exampel above: ((3000+750)/200) = 18.5 minutes.<br />
+
+                            If time is < 20.0 minutes, resupply warning message is displayed.
+  
+                        <h3>Calulator Inputs</h3>
+                        <ul>
+                            <li>Tender Capacity in Gallons</li>
+                            <li>Engine Capacity in Gallons</li>
+                            <li>Pump Rate @ 200Psi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Data From form -->
+            <div class="container">
+                <div class="row">
+                    <div id="waterContent"></div>
+                </div>
+            </div>
+         </form>
+    </article>
+    </div>
+
+    <!-- Add the footer message -->
+    <footer class="footer">
+        <div class="container">
+                <span class="text-muted">Copyright &copy; 2018, Greg Beam, GPLv3</span>
+        </div>
+    </footer>
+
+    <!-- Pages load faster fith JS at the bottom -->
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
+    <script src="./scripts/script.js"></script>
+
+</body>
+</html>
