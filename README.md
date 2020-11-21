@@ -41,3 +41,8 @@ sudo docker stop $(sudo docker ps -aq)
 sudo docker rm $(sudo docker ps -aq)
 
 ```
+
+## Running Wtthout Docker
+
+This app can be run without Docker. Just checkout the repository and, then
+browse to and open the `index.html` file.
