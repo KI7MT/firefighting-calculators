@@ -44,5 +44,5 @@ sudo docker rm $(sudo docker ps -aq)
 
 ## Running Without Docker
 
-This app can be run without Docker. Just checkout the repository and, then
-browse to and open the `index.html` file.
+This app can be run without Docker. Just checkout the repository, then
+browse to and open the `web/index.html` file.
